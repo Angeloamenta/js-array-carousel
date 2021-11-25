@@ -146,3 +146,39 @@ buttonDown.addEventListener("click", function (){
     buttonDown.classList.remove('able');
   }
 });
+
+buttonUp.addEventListener("click", function (){ 
+    const imageActive = document.querySelector('.img-container .active');
+  const dotActive = document.querySelector('.img-container-dx .active');
+  const titleActive = document.querySelector('.container-title-sub .active');
+  const textActive = document.querySelector('.container-text .active');
+
+  let classes = imageActive.classList;
+  let last = false;
+  for (let index = 0; index < classes.length; index++) {
+    console.log(index, classes[index]);
+    if (classes[index] == 'last') {
+       
+      last = true;
+    }
+  }
+
+  
+  if (last == false) {
+    imageActive.classList.remove('active');
+    dotActive.classList.remove('active');
+    titleActive.classList.remove('active');
+    textActive.classList.remove('active');
+    
+    const imgNext = imageActive.previousElementSibling;
+    const dotNext = dotActive.previousElementSibling;
+    const titleNext = titleActive.previousElementSibling;
+    const textNext = textActive.previousElementSibling;
+    imgNext.classList.add('active');
+    dotNext.classList.add('active');
+    titleNext.classList.add('active');
+    textNext.classList.add('active');
+  } else { 
+    buttonDown.classList.remove('able');
+  }
+});
