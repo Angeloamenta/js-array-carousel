@@ -142,6 +142,7 @@ buttonDown.addEventListener("click", function (){
     dotNext.classList.add('active');
     titleNext.classList.add('active');
     textNext.classList.add('active');
+    buttonUp.classList.add('able');
   } else { 
     buttonDown.classList.remove('able');
   }
@@ -179,7 +180,9 @@ buttonUp.addEventListener("click", function (){
     dotNext.classList.add('active');
     titleNext.classList.add('active');
     textNext.classList.add('active');
+    buttonDown.classList.add('able');
   } else { 
-    buttonDown.classList.remove('able');
+    buttonUp.classList.remove('able');
   }
+
 });

@@ -128,13 +128,13 @@
     text-align: center;
     line-height: 30px;
     border-radius: 50%;
-    background-color: white;
+    background-color: gray;
     transform: translate(-50%, -50%);
 }
 
 .container-dx .fa-angle-up.able, 
 .container-dx .fa-angle-down.able {
-    background-color: gray;
+    background-color: white;
 }
 
 .container-dx .fa-angle-up {
