@@ -148,6 +148,7 @@ buttonDown.addEventListener("click", function (){
 });
 
 buttonUp.addEventListener("click", function (){ 
+ 
     const imageActive = document.querySelector('.img-container .active');
   const dotActive = document.querySelector('.img-container-dx .active');
   const titleActive = document.querySelector('.container-title-sub .active');
@@ -157,7 +158,7 @@ buttonUp.addEventListener("click", function (){
   let last = false;
   for (let index = 0; index < classes.length; index++) {
     console.log(index, classes[index]);
-    if (classes[index] == 'last') {
+    if (classes[index] == 'first') {
        
       last = true;
     }

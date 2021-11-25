@@ -120,7 +120,7 @@
 
 
 .container-dx .fa-angle-up, 
-.container-dx .fa-angle-down {
+.container-dx .fa-angle-down{
     position: absolute;
     font-size: 1.5em;
     width: 30px;
@@ -130,6 +130,11 @@
     border-radius: 50%;
     background-color: white;
     transform: translate(-50%, -50%);
+}
+
+.container-dx .fa-angle-up.able, 
+.container-dx .fa-angle-down.able {
+    background-color: gray;
 }
 
 .container-dx .fa-angle-up {
