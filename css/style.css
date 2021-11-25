@@ -51,6 +51,7 @@
     background-color: black;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .img-container-dx {
@@ -58,6 +59,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 
 }
 
@@ -69,4 +71,29 @@
 
 .img-container-dx img.selected {
     opacity: 100%;
+}
+
+
+
+.container-dx .fa-angle-up, 
+.container-dx .fa-angle-down {
+    position: absolute;
+    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+
+.container-dx .fa-angle-up {
+    top: 5%;
+    left: 50%;
+}
+
+.container-dx .fa-angle-down {
+    bottom: 5%;
+    left: 50%;
 }
