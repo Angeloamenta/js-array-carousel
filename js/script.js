@@ -38,3 +38,51 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
+const slider = document.querySelector(".slider");
+const containerSx = document.querySelector (".container-dx");
+const imgContainer = document.querySelector(".img-container");
+
+const containerTitle = document.querySelector(".container-title-sub");
+
+const containerDx = document.querySelector(".container-dx");
+
+const imgContDx = document.querySelector(".img-container-dx");
+
+const buttonUp = document.querySelector(".container-dx .fa-angle-up");
+
+const buttonDown = document.querySelector(".container-dx .fa-angle-down");
+
+for (let index = 0; index < items.length; index++) {
+    let imgDoc = `<img src="${items[index]}" alt="">`
+    console.log(imgDoc);
+
+    let titleDoc = `<h2>${title[index]}</h2>`
+
+    let subTitle = `<p>${text[index]}</p>`
+
+    let imgMini = `<img src="${items[index]}" alt="">`
+
+
+    
+    imgContainer.innerHTML += imgDoc;
+    containerTitle.innerHTML += titleDoc;
+    containerTitle.innerHTML += subTitle;
+    imgContDx.innerHTML += imgMini
+}
+
+let buttonTop = `<i class="fa-solid fa-angle-up"></i>`;
+
+let buttonBottom = `<i class="fa-solid fa-angle-down"></i>`;
+
+containerDx.innerHTML +=buttonTop;
+containerDx.innerHTML +=buttonBottom;
+
+// prendere lista di classi uguali
+const imgTrue = document.querySelectorAll(".img-container img");
+
+const imgMiniTrue = document.querySelectorAll(".img-container-dx img")
+
+// prendere primo ed ultimo elemento
+imgTrue[0].classList.add("first", "active");
+
+imgTrue[imgTrue.length -1].classList.add("last");
