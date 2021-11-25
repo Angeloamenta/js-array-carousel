@@ -27,11 +27,13 @@
     height: 100%;
     width: 80%;
     background-color: indigo;
+    position: relative;
 }
 
 .img-container {
     width: 100%;
     height: 100%;
+    position: relative
 }
 
 .img-container img {
@@ -45,6 +47,42 @@
     display: block;
 }
 
+.container-title {
+    width: 100%;
+    height: 100%;
+    /* background-color: tomato; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-title-sub {
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 15px;
+    text-align: end;
+}
+.container-title-sub h2,
+.container-title-sub p {
+    display: none;
+}
+
+.container-title-sub h2.active,
+.container-title-sub p.active{
+    display: block;
+}
+/* 
+.container-text div {
+    display: none;
+}
+
+.container-text div.active{
+    display: block;
+} */
+
+/* container-dx */
 .container-dx {
     height: 100%;
     width: 20%;
