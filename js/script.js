@@ -48,13 +48,17 @@ const containerDx = document.querySelector(".container-dx");
 
 const imgContDx = document.querySelector(".img-container-dx");
 
-const buttonUp = document.querySelector(".container-dx .fa-angle-up");
+// let buttonTop = `<i id="bt-up" class="fa-solid fa-angle-up"></i>`;
 
-const buttonDown = document.querySelector(".container-dx .fa-angle-down");
+// let buttonBottom = `<i id="bt-down" class="fa-solid fa-angle-down"></i>`;
+
+const buttonUp = document.getElementById("bt-up");
+
+const buttonDown = document.getElementById("bt-down");
 
 for (let index = 0; index < items.length; index++) {
     let imgDoc = `<img src="${items[index]}" alt="">`
-    console.log(imgDoc);
+    
 
     let titleDoc = `<h2>${title[index]}</h2>`
 
@@ -70,12 +74,9 @@ for (let index = 0; index < items.length; index++) {
     imgContDx.innerHTML += imgMini
 }
 
-let buttonTop = `<i class="fa-solid fa-angle-up"></i>`;
 
-let buttonBottom = `<i class="fa-solid fa-angle-down"></i>`;
-
-containerDx.innerHTML +=buttonTop;
-containerDx.innerHTML +=buttonBottom;
+// containerDx.innerHTML +=buttonTop;
+// containerDx.innerHTML +=buttonBottom;
 
 // prendere lista di classi uguali
 const imgTrue = document.querySelectorAll(".img-container img");
@@ -86,3 +87,7 @@ const imgMiniTrue = document.querySelectorAll(".img-container-dx img")
 imgTrue[0].classList.add("first", "active");
 
 imgTrue[imgTrue.length -1].classList.add("last");
+
+buttonDown.addEventListener("click", function (){ 
+    
+});
