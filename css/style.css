@@ -59,7 +59,7 @@
 .container-title-sub {
     color: white;
     position: absolute;
-    bottom: 5px;
+    bottom: 20%;
     right: 5px;
     padding: 15px;
     text-align: end;
@@ -73,14 +73,20 @@
 .container-title-sub p.active{
     display: block;
 }
-/* 
-.container-text div {
+
+.container-text p {
     display: none;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    padding: 15px;
+    text-align: end;
 }
 
-.container-text div.active{
+.container-text .active{
     display: block;
-} */
+}
 
 /* container-dx */
 .container-dx {
@@ -107,7 +113,7 @@
     opacity: 40%;
 }
 
-.img-container-dx img.selected {
+.img-container-dx img.active {
     opacity: 100%;
 }
 

@@ -44,6 +44,9 @@ const imgContainer = document.querySelector(".img-container");
 
 const containerTitle = document.querySelector(".container-title-sub");
 
+const containerText = document.querySelector(".container-text");
+
+
 const containerDx = document.querySelector(".container-dx");
 
 const imgContDx = document.querySelector(".img-container-dx");
@@ -70,7 +73,7 @@ for (let index = 0; index < items.length; index++) {
     
     imgContainer.innerHTML += imgDoc;
     containerTitle.innerHTML += titleDoc;
-    containerTitle.innerHTML += subTitle;
+    containerText.innerHTML += subTitle;
     imgContDx.innerHTML += imgMini
 }
 
@@ -83,11 +86,63 @@ const imgTrue = document.querySelectorAll(".img-container img");
 
 const imgMiniTrue = document.querySelectorAll(".img-container-dx img")
 
+const titleText = document.querySelectorAll(".container-title-sub h2")
+
+const textOnly = document.querySelectorAll(".container-text p")
+
+
+
 // prendere primo ed ultimo elemento
 imgTrue[0].classList.add("first", "active");
 
 imgTrue[imgTrue.length -1].classList.add("last");
 
+imgMiniTrue[0].classList.add("first", "active");
+
+imgMiniTrue[imgTrue.length -1].classList.add("last");
+
+titleText[0].classList.add("first", "active");
+
+titleText[title.length -1].classList.add("last");
+
+textOnly[0].classList.add("first", "active");
+
+textOnly[text.length -1].classList.add("last");
+
+
+
 buttonDown.addEventListener("click", function (){ 
+    const imageActive = document.querySelector('.img-container .active');
+  const dotActive = document.querySelector('.img-container-dx .active');
+  const titleActive = document.querySelector('.container-title-sub .active');
+  const textActive = document.querySelector('.container-text .active');
+
+  let classes = imageActive.classList;
+  let last = false;
+  for (let index = 0; index < classes.length; index++) {
+    console.log(index, classes[index]);
+    if (classes[index] == 'last') {
+       
+      last = true;
+    }
+  }
+
+  
+  if (last == false) {
+    imageActive.classList.remove('active');
+    dotActive.classList.remove('active');
+    titleActive.classList.remove('active');
+    textActive.classList.remove('active');
     
+    const imgNext = imageActive.nextElementSibling;
+    const dotNext = dotActive.nextElementSibling;
+    const titleNext = titleActive.nextElementSibling;
+    const textNext = textActive.nextElementSibling;
+    imgNext.classList.add('active');
+    dotNext.classList.add('active');
+    titleNext.classList.add('active');
+    textNext.classList.add('active');
+  } else { 
+    buttonDown.classList.remove('able');
+  }
 });
