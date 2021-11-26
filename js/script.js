@@ -60,6 +60,7 @@ const buttonUp = document.getElementById("bt-up");
 const buttonDown = document.getElementById("bt-down");
 
 for (let index = 0; index < items.length; index++) {
+
     let imgDoc = `<img src="${items[index]}" alt="">`
     
 
@@ -186,3 +187,6 @@ buttonUp.addEventListener("click", function (){
   }
 
 });
+
+
+
